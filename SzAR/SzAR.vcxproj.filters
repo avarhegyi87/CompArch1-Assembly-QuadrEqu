@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="y1je9i_03feladat_masodfoku.cpp">
+    <ClCompile Include="szga1_y1je9i_03_masodfoku.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
