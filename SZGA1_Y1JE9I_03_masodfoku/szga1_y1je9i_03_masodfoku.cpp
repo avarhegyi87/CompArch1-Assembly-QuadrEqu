@@ -6,19 +6,19 @@ int main() {
 	const char *msg_szammegad_opcio_kerdes = "Milyen változókkal fusson a program? Gépelje be az opció számát és üssön Entert!\n"
 		"(1) Én adom meg\n(2) A program generálja véletlenszerûen (-100 és 100 között)";
 	const char *msg_szammegad_opcio_valasz = "\nA választott opció: ";
-	const char *opcioformatum = "%d";
 	const char *msg_hibas_opcio = "Hiba! Nem megfelelõ opciószám! Próbálja újra!\n";
-	const char *msg_hibas_szam = "Nem megfelelõ szám! A változóknak -100 és 100 között kell lenniük.\n"
-		"Adjon meg új számokat!\n";
 	const char *msg_utasitas = "\nAdja meg az ax^2 + bx + c másodfoku egyenlet a, b, c egész tényezõit szóközökkel elválasztva!\n"
 		"A számoknak -100 és 100 közöttieknek kell lenniük.\n";
-	const char *beformatum = "%d %d %d";
+	const char *msg_hibas_szam = "Nem megfelelõ szám! A változóknak -100 és 100 között kell lenniük.\n"
+		"Adjon meg új számokat!\n";
 	const char *msg_megerosites = "\n\nA kiválasztott egyenlet: %dx^2 + %dx + %d = 0";
-	const char *ujsor = "\n";
 	const char *msg_egymegoldaskiir = "Az egyenletnek egy megoldása van:\nx = %.3lf";
 	const char *msg_ketmegoldaskiir = "Az egyenletnek két megoldása van:\nx1 = %.3lf, x2 = %.3lf";
 	const char *msg_nincsmo = "\nAz egyenletnek nincsen valós megoldása.\n";
 	const char *msg_nemert = "\nNem értelmezhetõ mûvelet a diszkrimináns kiszámolása során.\n";
+	const char *ujsor = "\n";
+	const char *opcioformatum = "%d";
+	const char *beformatum = "%d %d %d";
 
 	int opcio = 0;
 	int valtozok[3] = { 0 };
@@ -26,7 +26,6 @@ int main() {
 	int d;
 	short int minusznegy = -4; //0xfc;
 	short int ketto = 2;
-	double minusznull = 0x80000000;
 	int nevezo;
 	double x1, x2;
 
