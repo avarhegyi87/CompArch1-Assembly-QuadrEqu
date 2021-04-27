@@ -27,6 +27,7 @@
     <ProjectGuid>{60d65103-59e6-4aa6-ab2c-052fb9c47440}</ProjectGuid>
     <RootNamespace>SzAR</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>SZGA1_03_feladat</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
