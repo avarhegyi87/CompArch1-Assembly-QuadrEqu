@@ -7,7 +7,7 @@ int main() {
 		"(1) Én adom meg\n(2) A program generálja véletlenszerûen (-100 és 100 között)";
 	const char *msg_szammegad_opcio_valasz = "\nA választott opció: ";
 	const char *msg_hibas_opcio = "Hiba! Nem megfelelõ opciószám! Próbálja újra!\n";
-	const char *msg_utasitas = "\nAdja meg az ax^2 + bx + c másodfoku egyenlet a, b, c egész tényezõit szóközökkel elválasztva!\n"
+	const char *msg_utasitas = "\nAdja meg az ax^2 + bx + c másodfokú egyenlet a, b, c (egész) együtthatóit szóközökkel elválasztva!\n"
 		"A számoknak -100 és 100 közöttieknek kell lenniük.\n";
 	const char *msg_hibas_szam = "Nem megfelelõ szám! A változóknak -100 és 100 között kell lenniük.\n"
 		"Adjon meg új számokat!\n";
@@ -157,7 +157,7 @@ int main() {
 		jg kontroll_hiba;
 		cmp c, -100;
 		jl kontroll_hiba;
-		jmp kilep_kontroll;					//kilépés ha mindegyik változó -100 és 100 közötti
+		jmp kilep_kontroll;					//kilépés, ha mindegyik változó -100 és 100 közötti
 	kontroll_hiba:
 		mov saveesp, esp;
 		push msg_hibas_szam;
@@ -198,7 +198,7 @@ int main() {
 	//diszkrimináns kiszámítása, megoldások számának eldöntése
 	_asm {
 	kalkul_diszk:
-		//diszkrimináns számolunk elõször, hogy megállapítsuk a megoldások számát
+		//diszkriminánst számolunk elõször, hogy megállapítsuk a megoldások számát
 		mov saveesp, esp;
 		fild c;								//c egész változó a floating point verembe
 		fimul a;							//st(0) = c * a
@@ -248,7 +248,7 @@ int main() {
 
 		mov saveesp, esp;
 		fild d;								//ha itt tart a program, két megoldás van - diszkriminánst vissza a verembe
-		fsqrt;								//st(0) = diszk. négyzetgyöket
+		fsqrt;								//st(0) = diszk. négyzetgyökét
 		fild b;								//st(0) = b
 		fchs;								//st(0) = -b
 		fadd st(0), st(1);					//st(0) = -b + gyök:d
@@ -312,7 +312,7 @@ int main() {
 	_asm {
 	ervenytelen:
 		//egyelõre nem használt blokk (érvénytelen, pl. NaN eredményeknél használtam volna)
-		//itt hagyom magamnak esetleges késbbi játszadozásra :)
+		//itt hagyom esetleges késõbbi verziók számára
 		mov saveesp, esp;
 		push msg_nemert;
 		call dword ptr printf;
